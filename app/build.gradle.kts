@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "io.github.takusan23.newradiosupporter"
+        applicationId = "io.github.takusan23.newradiosupporter_superuser"
         minSdk = 30
         targetSdk = 34
         versionCode = 11
@@ -47,6 +47,13 @@ android {
 }
 
 dependencies {
+    // shizuku
+    val shizuku_version = "13.1.0"
+    implementation("dev.rikka.shizuku:api:$shizuku_version")
+    // Add this line if you want to support Shizuku
+    implementation("dev.rikka.shizuku:provider:$shizuku_version")
+    // Hidden API
+    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
